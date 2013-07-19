@@ -75,8 +75,8 @@ ui.form{
               },
               content = function()
                 ui.field.hidden{ id = "member_id", readonly = true, value = member.id }
-                ui.field.text{ label = _"Nachricht", name = "text", multiline = true, readonly = false }
-                ui.submit{ value = _"Senden" }
+                ui.field.text{ label = _"Message", name = "text", multiline = true, readonly = false }
+                ui.submit{ value = _"Submit" }
               end
             }
             end

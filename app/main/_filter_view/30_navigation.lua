@@ -26,7 +26,7 @@ slot.select('navigation', function()
       ui.link{
         content = function()
           ui.image{ static = "icons/16/css.png" }
-          ui.tag{ content = _"Switch Design" }
+          ui.tag{ content = _"Switch design" }
         end,
         module = 'member',
         view = 'settings_css'

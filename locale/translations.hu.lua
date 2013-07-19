@@ -707,7 +707,7 @@ return {
 ["Your support has been updated to the latest draft"] = "Támogatásod frissítve a legújabb vázlat szerint";
 ["Your vote has been discarded. Delegation rules apply if set."] = "Szavazatod visszavonva. Ha állítottál be delegációs szabályokat, úgy azok továbbra is érvényesek.";
 ["Z-A"] = "Z-A";
-["[Name of Language]"] = "magyar nyelv";
+["[Name of Language]"] = "Magyar nyelv";
 ["[No voting privilege]"] = "[Nincs szavazati jog]";
 ["[Registered members only]"] = "[Csak regisztrált tagok számára]";
 ["[event mail]       URL: #{url}"] = false;

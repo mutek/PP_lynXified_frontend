@@ -1,6 +1,9 @@
 #trace_show {
   cursor: pointer;
   float: right;
+  margin-right: 5px;
+  margin-top: 15px;
+  font-size: 40%;
 }
 
 .trace_list {

@@ -1,3 +1,7 @@
+# if it fails, try make clean;export LANG=en_US.utf8;make
+#   -lynX
+#
+LANG=en_US.utf8
 PATH:=$(PATH):/opt/rocketwiki/
 
 DIRS = help
@@ -16,3 +20,4 @@ clean:
 	rm -f $(HTML_HELP)
 
 all: help_html
+

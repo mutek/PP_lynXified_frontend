@@ -21,7 +21,7 @@ ui.form{
       svalue = setting and setting.value
     end
 
-    ui.tag{ tag = "p", content = _"I like to use the following Stylesheet:" }
+    ui.tag{ tag = "p", content = _"I like to use the following style sheet:" }
   
     ui.container{ content = function()
       ui.tag{

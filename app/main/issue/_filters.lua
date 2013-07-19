@@ -202,39 +202,42 @@ if member then
 
   policies = policies:exec()  
 
-  filter[#filter+1] = {
-    name = "any",
-    label = _"Alle Regelwerke",
-    selector_modifier = function(selector)  end
-  }
-  filter[#filter+1] = {
-    name = "direct",
-    label = _"Direkte Regelwerke",
-    selector_modifier = function(selector)
-      selector:add_where({"(issue.policy_id IN (SELECT id FROM policy WHERE active AND name LIKE '%direkt%') OR issue.policy_id = 10)"})
-    end
-  }
-  filter[#filter+1] = {
-    name = "mv",
-    label = _"Regelwerke zur Mitgliederversammlung",
-    selector_modifier = function(selector)
-      selector:add_where({"issue.policy_id IN (SELECT id FROM policy WHERE active AND name LIKE '%zur Mitgliederversammlung%')"})
-    end
-  }
-  filter[#filter+1] = {
-    name = "other",
-    label = _"Andere Regelwerke",
-    selector_modifier = function(selector)
-      selector:add_where({"(issue.policy_id IN (SELECT id FROM policy WHERE active AND name NOT LIKE '%direkt%' AND name NOT LIKE '%zur Mitgliederversammlung%') AND issue.policy_id != 10)"})
-    end
-  }
-  filter[#filter+1] = {
-    name = "selection",
-    label = _"Regelwerkauswahl",
-    selector_modifier = function(selector)  end
-  }
-
-  filters[#filters+1] = filter
+-- too austrian.. maybe this should be in an
+-- if (config.austria == true) flag check	-lynX
+--
+--	  filter[#filter+1] = {
+--	    name = "any",
+--	    label = _"Any policy",
+--	    selector_modifier = function(selector)  end
+--	  }
+--	  filter[#filter+1] = {
+--	    name = "direct",
+--	    label = _"Direkte Regelwerke",
+--	    selector_modifier = function(selector)
+--	      selector:add_where({"(issue.policy_id IN (SELECT id FROM policy WHERE active AND name LIKE '%direkt%') OR issue.policy_id = 10)"})
+--	    end
+--	  }
+--	  filter[#filter+1] = {
+--	    name = "mv",
+--	    label = _"Regelwerke zur Mitgliederversammlung",
+--	    selector_modifier = function(selector)
+--	      selector:add_where({"issue.policy_id IN (SELECT id FROM policy WHERE active AND name LIKE '%zur Mitgliederversammlung%')"})
+--	    end
+--	  }
+--	  filter[#filter+1] = {
+--	    name = "other",
+--	    label = _"Andere Regelwerke",
+--	    selector_modifier = function(selector)
+--	      selector:add_where({"(issue.policy_id IN (SELECT id FROM policy WHERE active AND name NOT LIKE '%direkt%' AND name NOT LIKE '%zur Mitgliederversammlung%') AND issue.policy_id != 10)"})
+--	    end
+--	  }
+--	  filter[#filter+1] = {
+--	    name = "selection",
+--	    label = _"Regelwerkauswahl",
+--	    selector_modifier = function(selector)  end
+--	  }
+--	
+--	  filters[#filters+1] = filter
 end
 
 if member then
